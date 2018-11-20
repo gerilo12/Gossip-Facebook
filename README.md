@@ -14,7 +14,3 @@ Il était demandé au site de contenir les specs suivantes :
 * Possibilité de liker les potins
 * Possibilité d'enlever un like déja mis
 * Commentaires et commentaires de commentaires
-
-## Lien vers le site en production
-
-Le site en production est consultable [ici](https://gossip-cruditay.herokuapp.com/).
