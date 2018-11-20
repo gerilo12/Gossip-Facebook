@@ -1,0 +1,13 @@
+<h1>Ton nouveau gossip ! <img src="http://image.noelshack.com/fichiers/2018/44/4/1541101054-wineload.gif" height="60" width="60"></h1>
+
+<%= form_for @gossip, url: {action: "create"} do |f| %>
+<div class="form-group">
+    <%= f.text_field :title, placeholder: 'Ton joli petit titre', class: "form-control" %>
+</div>
+<div class="form-group">
+<%= f.text_area :content, placeholder: 'Ton vilain gossip', class: "form-control" %>
+</div>
+<div class="form-group">
+    <button class ="btn btn-outline-dark" type="submit">Créer le gossip</button>
+</div>
+<% end %>

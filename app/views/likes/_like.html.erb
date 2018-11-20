@@ -1,0 +1,7 @@
+<p> 
+    <% if @verif == true %>
+     <%= link_to image_tag("http://image.noelshack.com/fichiers/2018/44/4/1541109258-likeempty.png"), user_gossip_likes_path(@user, @gossip), method: :post, remote: true %> CLIQUE POUR LIKE !
+    <% else %>
+    <%= link_to image_tag("http://image.noelshack.com/fichiers/2018/44/4/1541109258-likefull.png"), [@like.gossip.user, @like.gossip, @like], method: :delete %> CLIQUE POUR UNLIKE !
+    <% end %>
+</p>

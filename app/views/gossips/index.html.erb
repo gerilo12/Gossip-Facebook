@@ -1,0 +1,44 @@
+<body style="padding-left:10px;padding-right:10px;">
+<h1>Nos gossips ! <img src="http://image.noelshack.com/fichiers/2018/44/4/1541101054-wineload.gif" height="60" width="60"></h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <td>ID</td>
+            <td>Gossiper</td>
+            <td>Titre</td>            
+            <td>Content</td>
+            <td>Nombre de commentaires</td>
+            <td>Nombre de likes</td>
+        </tr>
+    </thead>
+    <tbody>
+    <% @gossips.each do |gossip| %>
+    <tr>
+        <td><%= gossip.id %></td>
+        <td><%= gossip.user.name %></td>
+        <td><%= gossip.title %></td>
+        <td><%= gossip.content %></td>
+        <td><%= gossip.comments.count %></td>
+        <td><%= gossip.likes.count %></td>
+        <td>
+            <a href="/users/<%=current_user.id%>/gossips/<%=gossip.id%>" class="btn btn-outline-dark">Voir le potin</a>
+            <% if current_user.id == gossip.user_id %>
+            <a href="/users/<%=current_user.id%>/gossips/<%=gossip.id%>/edit" class="btn btn-warning">Éditer</a>
+            <a href="<%=user_gossip_path(current_user.id, gossip.id)%>" class="btn btn-danger" data-method="DELETE">Supprimer</a>
+            <%end%>
+        </td>
+
+    </tr>
+    <% end %>
+    </tbody>
+</table>
+
+<p>
+    <a href="/users/<%=current_user.id%>/gossips/new" class="btn btn-success">Créer ton nouveau gossip !</a>
+</p>
+</body>
+
+
+
+

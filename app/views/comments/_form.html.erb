@@ -1,0 +1,9 @@
+<%= form_for ([@user, @gossip, @gossip.comments.build]), method: :post do |f| %>
+<div class="form-group">
+    <%= f.text_area :content, placeholder: 'Ton vilain commentaire', class: "form-control" %>
+</div>
+<div class="form-group">
+    <button class="btn btn-outline-dark" type="submit">Commenter</button>
+</div>
+<% end %>
+

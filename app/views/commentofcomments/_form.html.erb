@@ -1,0 +1,6 @@
+<%= form_for ([@user, @gossip, @comm, @comm.commentofcomments.build]), method: :post do |f| %>
+<div class="form-inline">    
+        <%= f.text_area :content, rows: "1", placeholder: 'Ton vilain comm de comm', class: "form-control form-control-sm" %>    
+        <button style="margin: 20px;", class="btn btn-outline-dark btn-sm mb-2" type="submit">Commenter</button>    
+</div>
+<% end %>

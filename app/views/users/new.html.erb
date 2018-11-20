@@ -1,0 +1,19 @@
+<h1 style="margin: 25px;"><a href="https://www.youtube.com/watch?v=uG5Phc6GxKY">Alors infidèle</a>, on est pas encore enregistré ? <img src="http://image.noelshack.com/fichiers/2018/44/4/1541101054-wineload.gif" height="60" width="60"></h1>
+<br>
+<%= form_for @user do |f| %>
+<div class="form-group row">
+<div class="col-sm-50" style="margin: 25px;">
+    <%= f.text_field :name, placeholder: 'Pseudo', class: "form-control" %>
+</div>
+<div class="col-sm-100" style="margin: 25px;">
+    <%= f.text_field :email, placeholder: 'Email', class: "form-control" %>
+</div>
+<div class="col-sm-75" style="margin: 25px;">
+    <%= f.text_field :password, placeholder: 'Mot de passe', class: "form-control" %>
+</div>
+<div class="col-sm-30" style="margin: 25px;">
+    <button class="btn btn-outline-dark" type="submit">Créer ton utilisateur</button>
+</div>
+</div>
+
+<% end %>

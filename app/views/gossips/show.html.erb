@@ -1,0 +1,27 @@
+<body style="margin-left: 10px">
+<!-- #NOM UTILISATEUR -->
+<h1>Voilà le potin de ses morts de <%=@gossip.user.name%>! <img src="http://image.noelshack.com/fichiers/2018/44/4/1541101054-wineload.gif" height="60" width="60"></h1>
+<br><br>
+<h1>Titre de merde : <%=@gossip.title%></h1>
+<br><br>
+<!-- #GOSSIP CONTENT -->
+<h2><blockquote>
+        <img src="http://image.noelshack.com/fichiers/2018/44/4/1541076385-silent-clipart-whispers-10.png" 
+        height="30" width="30">
+        <%= @gossip.content %>
+</blockquote></h2>
+<!-- #BOUTON LIKE -->
+<%= render 'likes/like' %> 
+<br>
+<!-- #COMPTEUR LIKE -->
+<p><%= @gossip.likes.count %> likes </p>
+<!-- #COMPTEUR COMMENTAIRE -->
+<p><%= @gossip.comments.count %> commentaires </p>
+<%@c=0%>
+<%= render @gossip.comments %>
+<h3>Ajouter un commentaire:</h3>
+<!-- #AJOUT COMMENTAIRE -->
+<%= render 'comments/form' %>
+
+<p><a href="/users/<%=current_user.id%>/gossips" class="btn btn-primary">Revenir aux gossips</a></p>
+</body>

@@ -1,0 +1,18 @@
+<header>
+    <% if logged_in? == true %>
+    <nav class="navbar navbar-dark bg-dark">
+    <h5><a href="https://www.youtube.com/watch?v=Mm0NMeWDhXE"><img src="http://image.noelshack.com/fichiers/2018/44/2/1540896122-parrot.gif" alt="partyparrot" height="40" width="40"> </a> Salut <%=current_user.name%>, bienvenue sur ta session ! </h5> 
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <h2><a class="text-white" href="/users/<%=current_user.id%>/">Accueil </a> </h2>
+                <h2><a class="text-white" href="/users/<%=current_user.id%>/gossips">Index des gossips </a> </h2>
+                <h2><a class="text-white" href="/users/<%=current_user.id%>/gossips/new">Nouveau gossip</a></h2>       
+                <h1><div class="logout" style="font-size: 75%;"><%= link_to "Log out", logout_path, method: :delete %></div></h1>    
+            </div>
+        </div>
+    </nav>
+    <% end %>
+</header>

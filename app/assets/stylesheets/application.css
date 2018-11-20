@@ -1,0 +1,65 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+ html {
+     padding-right: 10px;
+     padding-left: 10px;
+ }
+
+header {
+    font-family: American Typewriter, serif;
+    color: white
+}
+body h1{
+    display: flex;
+    align-items: center;
+}
+
+body h1,p,h2,h3{
+    
+    font-family: American Typewriter, serif;
+} 
+
+body {
+    font-family: American Typewriter, serif;
+    margin-top: 65px !important;
+}
+.accueil{
+    font-family: American Typewriter, serif;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center
+}
+.button_inscription{
+    margin: 25px;
+}
+.button_login{
+    margin: 25px;
+}
+.logo_accueil{
+    margin: 25px;
+    display: flex;
+    flex-direction: row;
+}
+
+#usershow{
+    font-family: American Typewriter, serif;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center
+}

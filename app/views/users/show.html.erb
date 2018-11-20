@@ -1,0 +1,7 @@
+<div id="usershow">
+<h1>Bienvenue <%= @user.name %> <img src="http://image.noelshack.com/fichiers/2018/44/4/1541101054-wineload.gif" height="60" width="60"></h1>
+<div class="button_login">   
+    <a class="btn btn-primary btn-lg" href="/users/<%=@user.id%>/gossips/" role="button">GOSSIPS</a>
+    <%= link_to "Reviens à l'accueil", '/', class: "btn btn-lg btn-primary" %>
+</div>
+</div>
